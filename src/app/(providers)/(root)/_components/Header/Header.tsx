@@ -5,7 +5,6 @@ import Link from "next/link";
 
 function Header() {
   const { isInitialized, isLogggedIn } = useAuth();
-
   return (
     <header>
       <div>
@@ -33,9 +32,9 @@ function Header() {
         <div>
           <button>글쓰기</button>
           {isInitialized && isLogggedIn ? (
-            <button>로그인</button>
-          ) : (
             <button>로그아웃</button>
+          ) : (
+            <button>로그인</button>
           )}
         </div>
       </div>
